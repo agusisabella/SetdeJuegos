@@ -81,7 +81,9 @@ def main(args):
 			fieldnames = ['nombre', 'edad','juego']
 			writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 			writer.writeheader()
-		diccionario={"nombre":"JUANa","edad":441,"juego":"asdsdsd"}
+			if(opcion==' SALIR ' ):
+				opcion= 'No jugO'
+		diccionario={"nombre":values['nombre'],"edad":values['edad'],"juego":opcion}
 		with open(nombreArch, 'a', newline='') as csvfile:
 			fieldnames = ['nombre', 'edad','juego']
 			writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
